@@ -1,5 +1,14 @@
 <Solution>
+  <Project Path="MigrateFromSqlToCosmosDb.Api.FunctionalTests/MigrateFromSqlToCosmosDb.Api.FunctionalTests.csproj" />
   <Project Path="MigrateFromSqlToCosmosDb.AppHost/MigrateFromSqlToCosmosDb.AppHost.csproj" />
+  <Project Path="MigrateFromSqlToCosmosDb.Application.Tests/MigrateFromSqlToCosmosDb.Application.Tests.csproj" />
+  <Project Path="MigrateFromSqlToCosmosDb.Application/MigrateFromSqlToCosmosDb.Application.csproj" />
+  <Project Path="MigrateFromSqlToCosmosDb.Contracts/MigrateFromSqlToCosmosDb.Contracts.csproj" />
+  <Project Path="MigrateFromSqlToCosmosDb.Domain.Tests/MigrateFromSqlToCosmosDb.Domain.Tests.csproj" />
+  <Project Path="MigrateFromSqlToCosmosDb.Domain/MigrateFromSqlToCosmosDb.Domain.csproj" />
+  <Project Path="MigrateFromSqlToCosmosDb.Infrastructure.IntegrationTests/MigrateFromSqlToCosmosDb.Infrastructure.IntegrationTests.csproj" />
+  <Project Path="MigrateFromSqlToCosmosDb.Infrastructure/MigrateFromSqlToCosmosDb.Infrastructure.csproj" />
+  <Project Path="MigrateFromSqlToCosmosDb.MigrationWorker/MigrateFromSqlToCosmosDb.MigrationWorker.csproj" />
   <Project Path="MigrateFromSqlToCosmosDb.ServiceDefaults/MigrateFromSqlToCosmosDb.ServiceDefaults.csproj" />
   <Project Path="MigrateFromSqlToCosmosDb/MigrateFromSqlToCosmosDb.csproj" />
 </Solution>

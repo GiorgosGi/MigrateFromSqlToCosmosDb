@@ -1,0 +1,41 @@
+name: ci
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  build-test-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore MigrateFromSqlToCosmosDb.slnx
+
+      - name: Build
+        run: dotnet build MigrateFromSqlToCosmosDb.slnx --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test MigrateFromSqlToCosmosDb.slnx --configuration Release --no-build --verbosity normal
+
+      - name: Verify formatting
+        run: dotnet format MigrateFromSqlToCosmosDb.slnx --verify-no-changes --verbosity minimal
+
+      - name: Validate Bicep
+        uses: azure/cli@v2
+        with:
+          inlineScript: az bicep build --file infra/main.bicep
+
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
