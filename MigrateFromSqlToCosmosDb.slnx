@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MigrateFromSqlToCosmosDb.AppHost/MigrateFromSqlToCosmosDb.AppHost.csproj" />
+  <Project Path="MigrateFromSqlToCosmosDb.ServiceDefaults/MigrateFromSqlToCosmosDb.ServiceDefaults.csproj" />
+  <Project Path="MigrateFromSqlToCosmosDb/MigrateFromSqlToCosmosDb.csproj" />
+</Solution>

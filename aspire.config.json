@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "MigrateFromSqlToCosmosDb.AppHost/MigrateFromSqlToCosmosDb.AppHost.csproj"
+  }
+}
